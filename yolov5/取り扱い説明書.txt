@@ -1,0 +1,6 @@
+１、ラズパイでserver.pyを実行する。
+
+２、ラズパイでカメラを起動する(「sudo nano start_stream.sh」と「cd mjpg-streamer/mjpg-streamer-experimental」をコマンドプロンプトで実行してから、「sh start_stream.sh」を実行する）http://192.168.0.244:8080/stream.htmlでそのページにアクセスできる。
+(右記のサイトを参考にした　https://www.ecomottblog.com/?p=8791　　　https://qiita.com/yoh-nak/items/723c2a6a1d83c63198d7)
+
+３、「cd /d D:\YOLOv5\yolov5」でyolov5ディレクトリに移動し、サーバー(メインpc)でanalysis.pyを実行する。「python analysis.py --weight yolov5l.pt --source http://192.168.0.244:8080/?action=stream」と入力する。yolov5l.ptをyolov5s.ptやyolov5mにすると処理が早くなるが制度が落ちる
